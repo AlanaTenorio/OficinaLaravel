@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/produto/cadastrar','ProdutoController@cadastrar')->name('cadastrar');
+Route::post('/produto/inserir','ProdutoController@inserir')->name('inserir');
+Route::get('/produto/exibir/{produto}','ProdutoController@exibir')->name('exibir');
