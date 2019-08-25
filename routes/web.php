@@ -26,3 +26,7 @@ Route::post('/produto/salvar/{produto}','ProdutoController@salvar')->name('salva
 Route::get('/produto/remover/{produto}','ProdutoController@remover')->name('remover');
 Route::post('/produto/deletar/{produto}','ProdutoController@deletar')->name('deletar');
 Route::get('/produto/listar','ProdutoController@listar')->name('listar');
+
+Route::get('/pedido/listar','PedidoController@listar')->name('pedido.listar');
+Route::get('/pedido/cadastrar','PedidoController@cadastrar')->name('pedido.cadastrar');
+Route::post('/pedido/criar','PedidoController@criar')->name('pedido.criar');
