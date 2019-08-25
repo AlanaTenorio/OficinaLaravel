@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Produto;
+use Auth;
 
 class ProdutoController extends Controller
 {
@@ -15,6 +16,7 @@ class ProdutoController extends Controller
         $produto = Produto::create([
             'nome' => $request->nome,
             'preco' => $request->preco,
+            'user_id' => Auth::user()->id,
         ]);
         return redirect()->route('exibir',$produto->id);
     }
