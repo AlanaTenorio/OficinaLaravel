@@ -16,5 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/produto/cadastrar','ProdutoController@cadastrar')->name('cadastrar');
-Route::post('/produto/inserir','ProdutoController@inserir')->name('inserir');
+Route::post('/produto/criar','ProdutoController@criar')->name('criar');
 Route::get('/produto/exibir/{produto}','ProdutoController@exibir')->name('exibir');
+Route::get('/produto/editar/{produto}','ProdutoController@editar')->name('editar');
+Route::post('/produto/salvar/{produto}','ProdutoController@salvar')->name('salvar');
+Route::get('/produto/remover/{produto}','ProdutoController@remover')->name('remover');
+Route::post('/produto/deletar/{produto}','ProdutoController@deletar')->name('deletar');
+Route::get('/produto/listar','ProdutoController@listar')->name('listar');
