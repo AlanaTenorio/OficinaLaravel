@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 @php($titulo = 'Produto: '.$produto->nome)
 @section('titulo',$titulo)
 @section('conteudo')

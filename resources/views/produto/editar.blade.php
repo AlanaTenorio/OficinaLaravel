@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 @php($titulo = 'Editar: '.$produto->nome)
 @section('titulo',$titulo)
 @section('conteudo')
