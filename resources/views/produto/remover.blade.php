@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 @php($titulo = 'Remover: '.$produto->nome)
 @section('titulo',$titulo)
 @section('conteudo')

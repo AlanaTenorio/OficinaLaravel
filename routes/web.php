@@ -15,6 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
+
+Route::get('/home','HomeController@index')->name('home');
 Route::get('/produto/cadastrar','ProdutoController@cadastrar')->name('cadastrar');
 Route::post('/produto/criar','ProdutoController@criar')->name('criar');
 Route::get('/produto/exibir/{produto}','ProdutoController@exibir')->name('exibir');

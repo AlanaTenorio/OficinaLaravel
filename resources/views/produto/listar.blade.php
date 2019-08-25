@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 @php($titulo = 'Lista de Produtos')
 @section('titulo', $titulo)
 @section('conteudo')
@@ -21,6 +21,10 @@
                     </tr>
                 @endforeach
             </table>
+        </div>
+
+        <div class="form-group">
+            <a href="{{ route("cadastrar") }}" class="btn btn-primary " role="button" aria-pressed="true">Cadastrar</a>
         </div>
     </div>
 @endsection

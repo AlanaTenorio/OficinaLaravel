@@ -1,6 +1,6 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('titulo','Cadastrar')
-@endsection
+
 @section('conteudo')
     <div class="card">
         <div class="card-header">Cadastrar</div>
