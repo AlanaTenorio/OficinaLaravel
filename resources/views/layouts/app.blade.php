@@ -95,7 +95,7 @@
         <main class="py-4">
             <div class="header">
                 <h1 class="titulo">Oficina LMTS</h1>
-                <h5 class="subtitulo">Título aqui: laravel é top</h5>
+                <h5 class="subtitulo">Introdução a PHP e ao framework Laravel</h5>
             </div>
             <div class="body">
                 <div class="container">
