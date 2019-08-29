@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Produto;
 use Auth;
+use Illuminate\Support\Facades\Validator;
 
 class ProdutoController extends Controller
 {
@@ -13,6 +14,15 @@ class ProdutoController extends Controller
     }
 
     public function criar(Request $request){
+        $validator = Validator::make($request->all(), [
+          'nome' => ['required','min:2','max:191'],
+          'preco' => ['required','numeric'],
+        ]);
+
+        if($validator->fails()){
+          return redirect()->back()->withErrors($validator->errors())->withInput();
+        }
+
         $produto = Produto::create([
             'nome' => $request->nome,
             'preco' => $request->preco,
@@ -30,6 +40,15 @@ class ProdutoController extends Controller
     }
 
     public function salvar(Request $request, Produto $produto){
+        $validator = Validator::make($request->all(), [
+          'nome' => ['required','min:2','max:191'],
+          'preco' => ['required','numeric'],
+        ]);
+
+        if($validator->fails()){
+          return redirect()->back()->withErrors($validator->errors())->withInput();
+        }
+
         $produto->nome = $request->nome;
         $produto->preco = $request->preco;
         $produto->save();
